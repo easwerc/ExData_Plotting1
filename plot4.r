@@ -3,7 +3,7 @@
 ## Course Project 1 - Plot 4
 # Clean up workspace and set the working directory
 rm(list=ls())
-setwd("D:\\R-work\\CourseraR\\ExData_Plotting1\\")
+#setwd("D:\\R-work\\CourseraR\\ExData_Plotting1\\")
 
 # Get the data 
 url <- "https://d396qusza40orc.cloudfront.net/exdata%2Fdata%2Fhousehold_power_consumption.zip"
@@ -12,7 +12,6 @@ zipfile <- tempfile()
 download.file(url, zipfile)
 
 household_power <- read.table(unz(zipfile, "household_power_consumption.txt"), header=TRUE, sep=";", na.strings = "?")
-#household_power <- read.table("household_power_consumption.txt", header=TRUE, sep=";", na.strings = "?")
 unlink(zipfile)
 
 #Convert the Date and Time variables to a new column of DateTime POSIXlt class
